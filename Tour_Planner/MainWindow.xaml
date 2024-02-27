@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tour_Planner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Tour_Planner" Height="450" Width="800">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-    </Grid>
+            <Button Content="File" Width="Auto" Height="35"/>
+            <Button Content="Open" Width="Auto" Height="35" Grid.Column="1"/>
+            <Button Content="I am stupid" Width="Auto" Height="35" Grid.Column="2"/>
+            <Button Content="i too" Width="Auto" Height="35" Grid.Column="3"/>
+            <Button Content="jshekjrhwjek" Width="Auto" Height="35" Grid.Column="4"/>
+            <Button Content="hfdhskj" Width="Auto" Height="35" Grid.Column="5"/>
+            
+            
+        </Grid>
+    </DockPanel>
 </Window>
