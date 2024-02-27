@@ -6,13 +6,9 @@
         xmlns:local="clr-namespace:Tour_Planner"
         mc:Ignorable="d"
         Title="Tour_Planner" Height="450" Width="800">
-    <DockPanel>
+    <DockPanel LastChildFill="True">
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -23,15 +19,107 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
             <Button Content="File" Width="Auto" Height="35"/>
-            <Button Content="Open" Width="Auto" Height="35" Grid.Column="1"/>
-            <Button Content="I am stupid" Width="Auto" Height="35" Grid.Column="2"/>
-            <Button Content="i too" Width="Auto" Height="35" Grid.Column="3"/>
-            <Button Content="jshekjrhwjek" Width="Auto" Height="35" Grid.Column="4"/>
-            <Button Content="hfdhskj" Width="Auto" Height="35" Grid.Column="5"/>
-            
-            
+            <Button Content="Edit" Width="Auto" Height="35" Grid.Column="1"/>
+            <Button Content="Options" Width="Auto" Height="35" Grid.Column="2"/>
+            <Button Content="Help" Width="Auto" Height="35" Grid.Column="3"/>
+            <Button Content="" Width="Auto" Height="35" Grid.Column="4"/>
+            <Button Content="" Width="Auto" Height="35" Grid.Column="5"/>
+        </Grid>
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox TextWrapping="Wrap" Text="Search" TextAlignment="Left"/>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Tours"></Label>
+                <Button Grid.Column="1" Content="+"></Button>
+                <Button Grid.Column="2" Content="-"></Button>
+                <Button Grid.Column="3" Content="..."></Button>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ListBox BorderThickness="1" Grid.Row="0">
+                    <ListBoxItem BorderBrush="Black">Tour 1</ListBoxItem>
+                    <ListBoxItem BorderBrush="Black">Tour 2</ListBoxItem>
+                    <ListBoxItem BorderBrush="Black">Tour 3</ListBoxItem>
+                    <ListBoxItem BorderBrush="Black">Tour 4</ListBoxItem>
+                </ListBox>
+            </Grid>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="General"></Button>
+                <Button Grid.Column="1" Content="Route"></Button>
+                <Button Grid.Column="2" Content="Misc"></Button>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Image Source="C:/Studium/4.Semester/SWEN2/Screenshot 2024-02-27 182040.png" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="50 10 50 10"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.1*"/>
+                        <ColumnDefinition Width="0.1*"/>
+                        <ColumnDefinition Width="0.1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Tour Logs"/>
+                    <Button Grid.Column="1" Content="+"/>
+                    <Button Grid.Column="2" Content="-"/>
+                    <Button Grid.Column="3" Content="..."/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Background="LightBlue" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Content="Date" Grid.Row="0" Grid.Column="0"/>
+                <Label Background="LightBlue" Content="Duration" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+                <Label Background="LightBlue" Content="Distance" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+                
+            </Grid>
         </Grid>
     </DockPanel>
 </Window>
